@@ -32,6 +32,7 @@ import net.runelite.data.dump.MediaWiki;
 import net.runelite.data.dump.cache.ItemVariationsDumper;
 import net.runelite.data.dump.wiki.ItemLimitsDumper;
 import net.runelite.data.dump.wiki.ItemStatsDumper;
+import net.runelite.data.dump.wiki.SlayerXpDumper;
 
 public class App
 {
@@ -50,7 +51,9 @@ public class App
 		ItemVariationsDumper.dump(cacheStore);
 
 		final MediaWiki wiki = new MediaWiki("https://oldschool.runescape.wiki");
-		ItemLimitsDumper.dump(cacheStore, wiki);
-		ItemStatsDumper.dump(cacheStore, wiki);
+		//ItemLimitsDumper.dump(cacheStore, wiki);
+		//ItemStatsDumper.dump(cacheStore, wiki);
+		SlayerXpDumper.dump(cacheStore, wiki);
+
 	}
 }
